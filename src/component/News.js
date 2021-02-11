@@ -8,7 +8,6 @@ function News() {
     useEffect(()=>{
         axios.get("http://newsapi.org/v2/top-headlines?country=us&apiKey=14e88762b4e84ef38beb993992ac328f")
         .then(res=>{
-            console.log(res.data.articles)
             setNews(res.data.articles)
         })
     },[])
